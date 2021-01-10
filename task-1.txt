@@ -1,0 +1,82 @@
+1) Difference between HTTP/1.1 and HTTP/2?
+
+Ans : HTTP/1.1 keeps all request responses in a plain text format, HTTP/2 uses binary framing layer to encapsulate all 
+messages in binary format, while still maintaining HTTP semantics, such as verbs, methods, and headers.
+
+-> HTTP/1.1 was created in 1997 and used around 15 years.
+
+-> HTTP/2 is faster and most efficient compared to HTTP/1.1.One of the ways in which HTTP/2 is faster is in how it 
+   prioritizes content during the loading process.
+
+-> Main differences that impact performance:
+   
+   a) Mulltiplexing : HTTP/1.1 loads resources one after the other, so if one resource cannot be loaded, it blocks all
+      the other resources behind it. In contrast, HTTP/2 is able to use a single TCP connection to send multiple streams
+      of data at once so that no one resource blocks any other resource.HTTP/2 does this by splitting data into binary-code
+      messages and numbering these messages so that the client knows which stream each binary message belongs to.
+   
+   b) Server push : Typically, a server only serves content to a client device if the client asks for it. However, this
+      approach is not always practical for modern webpages, which often involve several dozen separate resources that the
+      client must request. HTTP/2 solves this problem by allowing a server to "push" content to a client before the client asks for it.
+   
+   c) Header compression : Small files load more quickly than large ones. To speed up web performance, both HTTP/1.1 and HTTP/2 compress
+      HTTP messages to make them smaller. However, HTTP/2 uses a more advanced compression method called HPACK that eliminates redundant
+      information in HTTP header packets. This eliminates a few bytes from every HTTP packet. 
+
+2) HTTP version history?
+
+Ans : Tim Berners-Lee and his team at CERN are credited with inventing the original HTTP, along with HTML and the associated technology
+      for a web server and a text-based web browser. Berners-Lee first proposed the "WorldWideWeb" project in 1989—now known as the World
+      Wide Web(www).The first version of the protocol had only one method, namely GET, which would request a page from a server. The 
+      response from the server was always an HTML page.   
+   
+           Year		HTTP Version
+            1991	  0.9
+            1996	  1.0
+            1997	  1.1
+            2015	  2.0
+            Draft(2020)	  3.0
+
+3) List 5 differences between Browser JS(console.log) vs Nodejs?
+
+Ans : Below is the list of points describe the difference between JavaScript and Node JS:
+
+      1) JavaScript is a simple programming language which runs in any browser JavaScript Engine. Whereas Node JS is an interpreter or
+	 running environment for a JavaScript programming language which holds a lot of excesses require libraries which can easily be
+	 accessed from JavaScript programming for better use.
+
+      2) JavaScript is normally used for any client-side activity for one web application. Activity can be addressing business validation
+	 or dynamic page display in some schedule time interval or basic Ajax call kind of task. Those are used on a maximum time for any
+	 web application. Whereas Node JS mainly used for accessing or running any operating system for non-blocking operation. An operation
+	 like create or executing shell script, or getting some specific hardware related information on one call or installed certificate 
+	details in the system or lot of define task which are non-blocking on an operating system.
+
+      3) JavaScript running in any engine like Spider monkey (FireFox), JavaScript Core (Safari), V8 (Google Chrome). So JavaScript
+	 programming is very easy to write and put any running environment means proper browser. Whereas Node JS only support V8 engine
+	 which googles chrome specific. But whether it support V8 engine, written JavaScript code can able to run in any environment. 
+	 So there has no browser specific constraint on it.
+
+      4) JavaScript is normally following Java Programming language standard. There may	 have some different way of writing code but at the
+	 same time, we can say it following Java Programming language standard. Whereas node JS is written in C++, and provide V8 engine 
+	 base browser javascript running engine which helps us to run written javascript program in any browser environment.
+
+      5) For accessing any operating system specific non-blocking task JavaScript has some specific object but all of them are operating 
+	 system specific. An example is ActiveX Control which is only running in Windows.But Node JS is given utility to run some 
+	 operating system specific non-blocking tasks from any JavaScript programming. It doesn’t have any operating system specific
+	 constant. Node JS is very much familiar to create a specific binding with the file system, and also allowing developer for reading
+	 or sometimes write on disk.
+
+4) What happens when you type a URL in the address bar i the browser?
+
+Ans : As we know, when we hit any URL or you can say domain name, then that website gets opened with its content. A server (a trained
+      computer) serves it. We also know that every computer has an IP address which is used for communication over the internet. It is an
+      address as its self explaining 'IP address'.
+
+      This is how I would explain it:
+	1) You enter a URL into a web browser.
+	2) The browser looks up the IP address for the domain name via DNS.
+	3) The browser sends a HTTP request to the server.
+	4) The server sends back a HTTP response.
+	5) The browser begins rendering the HTML.
+	6) The browser sends requests for additional objects embedded in HTML (images, css, JavaScript) and repeats steps 3-5.
+	7) Once the page is loaded, the browser sends further async requests as needed.
